@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+            android:padding="10dp"
+            android:rowCount="2"
+            android:columnCount="2"
+>
+
+    <LinearLayout
+            android:layout_margin="@dimen/project_item_margin"
+            android:background="@drawable/item_sytle_1"
+            android:orientation="vertical"
+            android:layout_width="@dimen/project_width"
+            android:layout_height="@dimen/project_height"
+    ></LinearLayout>
+    <LinearLayout
+            android:layout_margin="@dimen/project_item_margin"
+            android:background="@drawable/item_style_3"
+            android:orientation="vertical"
+            android:layout_width="@dimen/project_width"
+            android:layout_height="@dimen/project_height"
+    ></LinearLayout>
+    <LinearLayout
+            android:layout_margin="@dimen/project_item_margin"
+            android:background="@drawable/item_style_3"
+            android:orientation="vertical"
+            android:layout_width="@dimen/project_width"
+            android:layout_height="@dimen/project_height"
+    ></LinearLayout>
+    <LinearLayout
+            android:layout_margin="@dimen/project_item_margin"
+            android:background="@drawable/item_sytle_1"
+            android:orientation="vertical"
+            android:layout_width="@dimen/project_width"
+            android:layout_height="@dimen/project_height"
+    ></LinearLayout>
+</GridLayout>

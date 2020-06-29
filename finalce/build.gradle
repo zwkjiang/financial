@@ -1,0 +1,47 @@
+if(IS_ACCOUNT_APP.toBoolean()){
+    apply plugin: 'com.android.application'
+}else{
+    apply plugin: 'com.android.library'
+}
+def appInfo = rootProject.ext.android
+android {
+    compileSdkVersion appInfo.compileSdkVersion
+    buildToolsVersion appInfo.buildToolsVersion
+    defaultConfig {
+        minSdkVersion appInfo.minSdkVersion
+        targetSdkVersion appInfo.targetSdkVersion
+        versionCode appInfo.versionCode
+        versionName appInfo.versionName
+        testInstrumentationRunner appInfo.testInstrumentationRunner
+
+    }
+    dataBinding{
+        enabled= true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets{
+        main{
+            if(IS_FINALCE_App.toBoolean()){
+                manifest.srcFile 'src/main/debug/AndroidManifest.xml'
+            }else{
+                manifest.srcFile 'src/main/AndroidManifest.xml'
+            }
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+}

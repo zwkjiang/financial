@@ -1,0 +1,51 @@
+ext{
+    android = [
+            compileSdkVersion:29,
+            buildToolsVersion:"29.0.3",
+            applicationId:"com.example.financial",
+            minSdkVersion:14,
+            targetSdkVersion:29,
+            versionCode:1,
+            versionName:"1.0",
+            testInstrumentationRunner:"androidx.test.runner.AndroidJUnitRunner"
+    ]
+
+    dependenciesVersion=[
+            okhttp:"3.11.0",
+            interceptor:"3.10.0",
+            retrofit:"2.4.0",
+            gson:"2.4.0",
+            rxjava2:"2.4.0",
+            rxjava:"2.2.6",
+            rxandroid:"2.1.1",
+            rxlifecycle:"2.2.1",
+            material:"1.1.0",
+            design:"29.0.0",
+            banner:"1.4.10",
+            glide:"4.5.0"
+
+    ]
+
+    dependencies = [
+            okhttp:"com.squareup.okhttp3:okhttp:$dependenciesVersion.okhttp",
+            interceptor: "com.squareup.okhttp3:logging-interceptor:$dependenciesVersion.interceptor",
+            retrofit2: "com.squareup.retrofit2:retrofit:$dependenciesVersion.retrofit",
+            gson: "com.squareup.retrofit2:converter-gson:$dependenciesVersion.gson",
+            rxjava2: "com.squareup.retrofit2:adapter-rxjava2:$dependenciesVersion.rxjava2",
+            rxjava: "io.reactivex.rxjava2:rxjava:$dependenciesVersion.rxjava",
+            rxandroid: "io.reactivex.rxjava2:rxandroid:$dependenciesVersion.rxandroid",
+            rxlifecycle2:"com.trello.rxlifecycle2:rxlifecycle-components:$dependenciesVersion.rxlifecycle",
+            material:"com.google.android.material:material:$dependenciesVersion.material",
+            design:"com.android.support:design:$dependenciesVersion.design",
+            banner:"com.youth.banner:banner:$dependenciesVersion.banner",
+            glide:"com.github.bumptech.glide:glide:$dependenciesVersion.glide"
+    ]
+
+    url = [
+          debug:"http://api.zydeveloper.com:7077/",
+          release:"http://api.zydeveloper.com:7077/",
+          textUrl:"http://www.city2sky.cn/"
+    ]
+
+
+}

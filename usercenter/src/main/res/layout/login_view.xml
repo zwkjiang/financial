@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <import type="com.example.usercenter.viewmodel.UserViewModel"/>
+        <import type="com.example.usercenter.entity.UserEntity"/>
+        <import type="com.example.usercenter.view.LoginActivity"/>
+        <variable name="loginAct"
+                  type="LoginActivity"/>
+        <variable name="vm"
+                  type="UserViewModel"/>
+    </data>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+    >
+        <com.example.wiget.TitleBar
+                android:id="@+id/tb_bar"
+                app:left_txt="back"
+                app:left_icon="@mipmap/fanhui"
+                app:left_iocn_visible="true"
+                app:title_txt="用户登录"
+                app:right_txt=""
+                app:right_icon_visible="false"
+                app:right_icon="@mipmap/xinlang"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/titlebar_wh"
+        ></com.example.wiget.TitleBar>
+        <ImageView
+                android:scaleType="center"
+                android:layout_gravity="center"
+                android:src="@mipmap/logo"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"/>
+        <LinearLayout
+                android:id="@+id/ll_main"
+                android:padding="10dp"
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+        >
+        <EditText
+                android:paddingStart="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:hint="@string/user_hint_input_username"
+                android:inputType="text"
+                android:background="@drawable/edit_backgroud"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:text="@={vm.userEntity.username}"
+                android:layout_marginTop="20dp"
+        />
+        <EditText
+                android:paddingStart="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:hint="@string/user_hint_input_pwd"
+                android:inputType="textPassword"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edit_backgroud"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:text="@={vm.userEntity.pwd}"
+        />
+            <TextView
+                    android:layout_margin="10dp"
+                    android:layout_gravity="right"
+                    android:text="忘记密码"
+                    android:textColor="@color/gold"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignBottom="@+id/ll_main"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+        <Button
+                android:layout_gravity="center"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/btn_background"
+                android:onClick="@{loginAct::loginClick}"
+                android:text="@string/user_ui_btnlogin"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+        />
+
+        </LinearLayout>
+    </LinearLayout>
+</layout>

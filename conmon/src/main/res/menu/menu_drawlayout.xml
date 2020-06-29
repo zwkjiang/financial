@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/menu_drawlayout_mymsg"
+          android:title="我的消息"
+          android:icon="@mipmap/message"
+    ></item>
+    <item android:id="@+id/menu_drawlayout_modifypwd"
+          android:title="修改登录密码"
+          android:icon="@mipmap/pwd"
+    ></item>
+    <item android:id="@+id/menu_drawlayout_handpwd"
+          android:title="设置手势密码"
+          android:icon="@mipmap/handpwd"
+    ></item>
+    <item android:id="@+id/menu_drawlayout_invitecode"
+          android:title="邀请码"
+          android:icon="@mipmap/invite"
+    ></item>
+    <item android:id="@+id/menu_drawlayout_setting"
+          android:title="设置"
+          android:icon="@mipmap/setting"
+    ></item>
+</menu>

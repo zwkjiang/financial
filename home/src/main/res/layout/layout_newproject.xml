@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+               android:layout_height="match_parent"
+                android:orientation="vertical"
+>
+    <RelativeLayout
+            android:id="@+id/rl_newProject"
+            android:layout_margin="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/item_sytle_1"
+
+    >
+    </RelativeLayout>
+        <TextView
+                android:layout_marginTop="-15dp"
+                android:layout_marginLeft="50dp"
+                android:layout_alignTop="@id/rl_newProject"
+                android:text="新用户共享"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:background="@drawable/item_style_2"
+                android:layout_width="100dp"
+                android:layout_height="30dp"/>
+
+
+</RelativeLayout>

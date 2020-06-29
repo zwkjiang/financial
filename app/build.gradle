@@ -1,0 +1,54 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+def appInfo = rootProject.ext.android
+def dv = rootProject.ext.dependencies
+android {
+    compileSdkVersion appInfo.compileSdkVersion
+    buildToolsVersion appInfo.buildToolsVersion
+    defaultConfig {
+        applicationId appInfo.applicationId
+        minSdkVersion appInfo.minSdkVersion
+        targetSdkVersion appInfo.targetSdkVersion
+        versionCode appInfo.versionCode
+        versionName appInfo.versionName
+        testInstrumentationRunner appInfo.testInstrumentationRunner
+    }
+    dataBinding{
+        enabled= true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.core:core-ktx:1.3.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation dv.material
+    implementation dv.design
+    if(!IS_USERCENTER_APP.toBoolean()){
+        implementation project(path: ':usercenter')
+    }
+    implementation project(path: ':more')
+    implementation project(path: ':core')
+    implementation project(path: ':wiget')
+    implementation project(path: ':conmon')
+    implementation project(path: ':net')
+    implementation project(path: ':home')
+    implementation project(path: ':storage')
+    implementation project(path: ':finalce')
+    implementation project(path: ':accout')
+}

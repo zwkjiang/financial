@@ -1,0 +1,41 @@
+apply plugin: 'com.android.library'
+def appInfo = rootProject.ext.android
+def urls = rootProject.ext.url
+android {
+    compileSdkVersion appInfo.compileSdkVersion
+    buildToolsVersion appInfo.buildToolsVersion
+    defaultConfig {
+        minSdkVersion appInfo.minSdkVersion
+        targetSdkVersion appInfo.targetSdkVersion
+        versionCode appInfo.versionCode
+        versionName appInfo.versionName
+        testInstrumentationRunner appInfo.testInstrumentationRunner
+
+    }
+
+    buildTypes {
+        release {
+            buildConfigField("String","textUrl","\""+urls.textUrl+"\"")
+            buildConfigField("String","baseUrl","\""+urls.release+"\"")
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug{
+            buildConfigField("String","baseUrl","\""+urls.debug+"\"")
+            buildConfigField("String","textUrl","\""+urls.textUrl+"\"")
+        }
+
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation project(path: ':conmon')
+    implementation project(path: ':storage')
+}

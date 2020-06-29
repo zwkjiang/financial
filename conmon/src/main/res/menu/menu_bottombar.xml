@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/menu_bottombar_home"
+          android:title="主页"
+          android:icon="@mipmap/home"
+    ></item>
+    <item android:id="@+id/menu_bottombar_finalce"
+          android:title="理财"
+          android:icon="@mipmap/finalce"
+    ></item>
+    <item android:id="@+id/menu_bottombar_account"
+          android:title="账户"
+          android:icon="@mipmap/account"
+    ></item>
+    <item android:id="@+id/menu_bottombar_more"
+          android:title="更多"
+          android:icon="@mipmap/more"
+    ></item>
+</menu>

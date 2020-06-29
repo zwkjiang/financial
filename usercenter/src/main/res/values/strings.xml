@@ -1,0 +1,7 @@
+<resources>
+    <string name="user_hint_input_username">please input username</string>
+    <string name="user_hint_input_pwd">please input password</string>
+    <string name="user_login_success">Success!</string>
+    <string name="user_login_failed">Failed!</string>
+    <string name="user_ui_btnlogin">Login</string>
+</resources>

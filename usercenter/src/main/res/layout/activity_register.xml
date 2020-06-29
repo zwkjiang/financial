@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+             >
+
+    <data>
+        <import type="com.example.usercenter.viewmodel.RegisterViewModel"/>
+        <import type="com.example.usercenter.view.RegisterActivity"/>
+        <variable name="register"
+                  type="RegisterActivity"/>
+        <variable name="vm"
+                  type="RegisterViewModel"/>
+    </data>
+    <LinearLayout
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+        <TextView
+                android:layout_margin="15dp"
+                android:layout_gravity="center"
+                android:textSize="15sp"
+                android:text="设置昵称、头像、电话号码注册成为新用户"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></TextView>
+        <ImageView
+                android:scaleType="center"
+                android:layout_gravity="center"
+                android:src="@mipmap/logo"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+        ></ImageView>
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+            <EditText
+                    android:text="@={vm.userEntity.username}"
+                    android:hint="输入电话号码"
+                    android:layout_weight="7"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"></EditText>
+            <Button
+                    android:background="@drawable/btn_style1"
+                    android:text="发送验证码"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="@{register::goYan}"
+            ></Button>
+        </LinearLayout>
+        <EditText
+                android:text="@{vm.code.get()}"
+                android:hint="验证码"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></EditText>
+        <EditText
+                android:text="@={vm.userEntity.pwd}"
+                android:hint="输入密码"
+                android:inputType="textPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></EditText>
+        <EditText
+                android:text="@={register.rePassword.get()}"
+                android:hint="再次输入密码"
+                android:inputType="textPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></EditText>
+
+        <Button
+                android:background="@drawable/btn_style2"
+                android:layout_marginTop="40dp"
+                android:layout_gravity="center"
+                android:text="注册"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:onClick="@{register::goRegister}"
+        ></Button>
+    </LinearLayout>
+
+</layout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="user_hint_input_username">请输入用户名</string>
+    <string name="user_hint_input_pwd">请输入密码</string>
+    <string name="user_login_success">登录成功!</string>
+    <string name="user_login_failed">登录失败！</string>
+    <string name="user_ui_btnlogin">登录</string>
+</resources>
