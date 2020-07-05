@@ -2,9 +2,9 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 xmlns:tools="http://schemas.android.com/tools"
                 android:layout_width="match_parent"
-               android:layout_height="match_parent"
-                android:orientation="vertical"
+                android:layout_height="@dimen/project_width"
 >
+
     <RelativeLayout
             android:id="@+id/rl_newProject"
             android:layout_margin="20dp"
@@ -13,6 +13,69 @@
             android:background="@drawable/item_sytle_1"
 
     >
+        <TextView
+                android:id="@+id/pb_newProject"
+                style="@style/newUserText"
+                android:text=""
+                android:layout_marginTop="40dp"
+                android:layout_marginStart="30dp"
+                tools:ignore="RtlCompat"/>
+        <TextView
+                android:id="@+id/rate_newProject"
+                style="@style/newUserTextPb"
+                android:layout_below="@id/pb_newProject"
+                android:layout_alignLeft="@id/pb_newProject"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                tools:ignore="NotSibling,RtlCompat"/>
+        <TextView
+                style="@style/newUserTextRate"
+                android:text="%"
+                android:layout_toRightOf="@+id/rate_newProject"
+                android:layout_alignBottom="@id/rate_newProject"
+                android:layout_marginStart="5dp"
+                tools:ignore="RtlCompat"/>
+        <TextView
+                android:id="@+id/STv_newProject"
+                style="@style/newUserText"
+                android:text="起投金额:"
+                android:layout_toRightOf="@id/pb_newProject"
+                android:layout_alignBottom="@id/pb_newProject"
+                android:layout_marginStart="25dp"
+                android:layout_marginBottom="-16dp"
+                tools:ignore="RtlCompat"/>
+        <TextView
+                android:id="@+id/SPrice_Project"
+                style="@style/newUserTextPD"
+                android:layout_toRightOf="@id/STv_newProject"
+                android:layout_alignBottom="@id/STv_newProject"
+        />
+        <TextView
+                android:id="@+id/ITv_newProject"
+                style="@style/newUserText"
+                android:text="投资期限:"
+                android:layout_below="@id/STv_newProject"
+                android:layout_alignLeft="@id/STv_newProject"
+                android:layout_marginTop="20dp"
+                />
+        <TextView
+                android:id="@+id/IDate_newProject"
+                style="@style/newUserTextPD"
+                android:layout_toRightOf="@id/ITv_newProject"
+                android:layout_alignBottom="@id/ITv_newProject"
+        />
+        <Button
+                android:id="@+id/goinvest_home"
+                style="@style/newUserTextPD"
+                android:layout_width="100dp"
+                android:layout_height="45dp"
+                android:layout_toRightOf="@+id/SPrice_Project"
+                android:layout_alignBottom="@+id/SPrice_Project"
+                android:layout_marginBottom="-25dp"
+                android:layout_marginStart="15dp"
+                android:text="立即抢购"
+                android:background="@drawable/sbnt_backgroud"
+                tools:ignore="RtlCompat"/>
     </RelativeLayout>
         <TextView
                 android:layout_marginTop="-15dp"
@@ -25,5 +88,4 @@
                 android:layout_width="100dp"
                 android:layout_height="30dp"/>
 
-
-</RelativeLayout>
+    </RelativeLayout>

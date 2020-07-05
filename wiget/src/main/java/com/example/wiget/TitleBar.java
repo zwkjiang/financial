@@ -115,4 +115,7 @@ public class TitleBar extends RelativeLayout implements View.OnClickListener {
         void leftClick(View view);
         void rightClick(View view);
     }
+    public void setTitle(String _title){
+        title.setText(_title);
+    }
 }

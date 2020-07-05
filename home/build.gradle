@@ -4,6 +4,7 @@ if(IS_HOME_APP.toBoolean()){
     apply plugin: 'com.android.library'
 }
 def appInfo = rootProject.ext.android
+def dependencie = rootProject.ext.dependencies
 android {
     compileSdkVersion appInfo.compileSdkVersion
     buildToolsVersion appInfo.buildToolsVersion
@@ -13,7 +14,11 @@ android {
         versionCode appInfo.versionCode
         versionName appInfo.versionName
         testInstrumentationRunner appInfo.testInstrumentationRunner
-
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
     }
 
     buildTypes {
@@ -49,4 +54,7 @@ dependencies {
     implementation project(path: ':net')
     implementation project(path: ':conmon')
     implementation project(path: ':wiget')
+    implementation project(path: ':router')
+    annotationProcessor  dependencie.arouter_compiler
+    annotationProcessor  dependencie.roomcompiler
 }

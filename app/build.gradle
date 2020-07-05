@@ -6,6 +6,7 @@ apply plugin: 'kotlin-android-extensions'
 
 def appInfo = rootProject.ext.android
 def dv = rootProject.ext.dependencies
+def dependencie = rootProject.ext.dependencies
 android {
     compileSdkVersion appInfo.compileSdkVersion
     buildToolsVersion appInfo.buildToolsVersion
@@ -16,6 +17,13 @@ android {
         versionCode appInfo.versionCode
         versionName appInfo.versionName
         testInstrumentationRunner appInfo.testInstrumentationRunner
+        // 这里添加
+        multiDexEnabled true
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
     }
     dataBinding{
         enabled= true
@@ -51,4 +59,6 @@ dependencies {
     implementation project(path: ':storage')
     implementation project(path: ':finalce')
     implementation project(path: ':accout')
+    annotationProcessor  dependencie.arouter_compiler
+    implementation project(path: ':router')
 }

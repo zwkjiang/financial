@@ -12,12 +12,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
-import com.example.accout.AccountFragment;
-import com.example.finalce.FinalceFragment;
+import com.example.accout.view.AccountFragment;
+import com.example.finalce.view.FinalceFragment;
 import com.example.financial.R;
 import com.example.financial.adapter.FragmentViewPagerAdapter;
 import com.example.home.view.HomeFragment;
-import com.example.more.MoreFragment;
+import com.example.more.view.MoreFragment;
 import com.example.wiget.TitleBar;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -50,12 +50,12 @@ public class HomeActivity extends AppCompatActivity {
                         setLeftRightVisible(true);
                         return true;
                     case R.id.menu_bottombar_finalce:
-
                         vpMain.setCurrentItem(1);
                         setLeftRightVisible(false);
                         return true;
                     case R.id.menu_bottombar_account:
                         vpMain.setCurrentItem(2);
+                        tbMain.setTitle("个人中心");
                         setLeftRightVisible(false);
                         return true;
                     case R.id.menu_bottombar_more:

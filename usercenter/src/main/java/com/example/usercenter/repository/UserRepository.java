@@ -7,6 +7,8 @@ import com.example.usercenter.entity.UserEntity;
 import com.example.usercenter.model.UserModel;
 
 public class UserRepository extends Repository<UserModel> {
+
+
     @Override
     protected UserModel createModel() {
         return new UserModel();

@@ -5,6 +5,9 @@ public class BasesRespEntity<T> {
     private T data;
     private String msg;
 
+    public BasesRespEntity(T data) {
+        this.data = data;
+    }
 
     public int getCode() {
         return code;

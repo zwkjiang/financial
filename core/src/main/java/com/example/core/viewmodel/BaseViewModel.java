@@ -1,9 +1,6 @@
 package com.example.core.viewmodel;
 
-import androidx.lifecycle.Lifecycle;
-import androidx.lifecycle.LifecycleObserver;
-import androidx.lifecycle.OnLifecycleEvent;
-import androidx.lifecycle.ViewModel;
+import androidx.lifecycle.*;
 import com.example.core.repository.Repository;
 
 import java.util.HashMap;
@@ -12,6 +9,12 @@ import java.util.Map;
 public class BaseViewModel extends ViewModel implements LifecycleObserver {
     protected Map<String, Repository> repositoryMap;
 
+    protected LifecycleOwner owner;
+
+    public BaseViewModel(LifecycleOwner _owner){
+        repositoryMap  = new HashMap<>();
+        owner=_owner;
+    }
     public BaseViewModel(){
         repositoryMap  = new HashMap<>();
     }

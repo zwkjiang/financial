@@ -11,8 +11,11 @@ public interface UserApi {
 
     @POST("api/User/login")
     LiveData<BasesRespEntity<UserEntity>> login(@Body UserEntity userEntity);
+
     @GET("api/User/getAuthCode?")
     LiveData<BasesRespEntity<String>> getCode(@Query("phoneNumber") String phoneNumber);
 
+    @POST("api/User/register")
+    LiveData<BasesRespEntity<UserEntity>> register(@Body UserEntity userEntity);
 
 }

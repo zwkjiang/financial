@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="projectLinearLayout">
+        <item name="android:layout_width">@dimen/project_width</item>
+        <item name="android:layout_height">@dimen/project_height</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+    <style name="projectTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:textSize">28sp</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+    <style name="childLinear">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart"
+              tools:ignore="NewApi">15dp</item>
+        <item name="android:layout_marginEnd"
+              tools:ignore="NewApi">15dp</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_marginTop">10dp</item>
+    </style>
+    <style name="projectDate">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart" tools:ignore="NewApi">10dp</item>
+    </style>
+    <style name="projectLv">
+        <item name="android:textSize">35sp</item>
+        <item name="android:textColor">@color/red</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="RatingBarStyle" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/rating_bar_drawable</item>
+        <item name="android:minWidth">30dp</item>
+        <item name="android:minHeight">30dp</item>
+    </style>
+    <style name="txt_invest">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/grayheight</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+    <style name="txt2_invest">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/coral</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+</resources>

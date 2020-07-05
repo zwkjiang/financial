@@ -22,8 +22,15 @@ ext{
             material:"1.1.0",
             design:"29.0.0",
             banner:"1.4.10",
-            glide:"4.5.0"
-
+            glide:"4.5.0",
+            room_version:"2.2.5",
+            recyclerview:"28.0.0",
+            SmartRefreshLayout:"1.1.0",
+            multidex:"1.0.3",
+            arouter:"1.5.0",
+            legacy:"1.0.0",
+            arouter_compiler:"1.2.2",
+            tablayout:"2.0.2@aar"
     ]
 
     dependencies = [
@@ -38,7 +45,17 @@ ext{
             material:"com.google.android.material:material:$dependenciesVersion.material",
             design:"com.android.support:design:$dependenciesVersion.design",
             banner:"com.youth.banner:banner:$dependenciesVersion.banner",
-            glide:"com.github.bumptech.glide:glide:$dependenciesVersion.glide"
+            glide:"com.github.bumptech.glide:glide:$dependenciesVersion.glide",
+            room:"androidx.room:room-runtime:$dependenciesVersion.room_version",
+            roomcompiler:"androidx.room:room-compiler:$dependenciesVersion.room_version",
+            recyclerview:"com.android.support:recyclerview-v7:$dependenciesVersion.recyclerview",
+            SmartRefreshLayout:"com.scwang.smartrefresh:SmartRefreshLayout:$dependenciesVersion.SmartRefreshLayout",
+            SmartRefreshHeader:"com.scwang.smartrefresh:SmartRefreshHeader:$dependenciesVersion.SmartRefreshLayout",
+            multidex:"com.android.support:multidex:$dependenciesVersion.multidex",
+            arouter: "com.alibaba:arouter-api:$dependenciesVersion.arouter",
+            legacy:"androidx.legacy:legacy-support-v4:$dependenciesVersion.legacy",
+            arouter_compiler:"com.alibaba:arouter-compiler:$dependenciesVersion.arouter_compiler",
+            tablayout:"com.flyco.tablayout:FlycoTabLayout_Lib:$dependenciesVersion.tablayout"
     ]
 
     url = [

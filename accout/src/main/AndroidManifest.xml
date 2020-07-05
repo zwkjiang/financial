@@ -1,2 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.example.accout"/>
+          package="com.example.accout">
+    <application>
+        <activity android:name=".view.BuyActivity"></activity>
+    </application>
+</manifest>
+

@@ -14,4 +14,22 @@
 
         <attr name="icon_wh" format="integer"></attr>
     </declare-styleable>
+    <!--进度条-->
+    <declare-styleable name="FinalceProcessBar">
+        <attr name="textColor" format="color"></attr>
+        <attr name="textSize" format="dimension"></attr>
+        <attr name="stork_width" format="dimension"></attr>
+        <attr name="stork_color" format="color"></attr>
+        <attr name="sweepangle" format="float"></attr>
+        <attr name="txtcontent" format="string"></attr>
+    </declare-styleable>
+    <declare-styleable name="BubbleView">
+        <attr name="backgroundColor" format="color"></attr>
+        <attr name="storkWidth" format="dimension"></attr>
+        <attr name="storkColor" format="color"></attr>
+        <attr name="contentColor" format="color"></attr>
+        <attr name="contentSize" format="dimension"></attr>
+        <attr name="bubbleContent" format="string"></attr>
+        <attr name="bubbleRadius" format="float"></attr>
+    </declare-styleable>
 </resources>

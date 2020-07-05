@@ -36,7 +36,7 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
-    compile "androidx.core:core-ktx:+"
+    implementation "androidx.core:core-ktx:+"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
     api dependencie.okhttp
@@ -49,6 +49,16 @@ dependencies {
     api dependencie.rxlifecycle2
     api dependencie.banner
     api dependencie.glide
+    api dependencie.room
+    api dependencie.recyclerview
+    api dependencie.SmartRefreshLayout
+    api dependencie.SmartRefreshHeader
+    api dependencie.material
+    api dependencie.design
+    api dependencie.multidex
+    api dependencie.arouter
+    api dependencie.legacy
+    api dependencie.tablayout
 }
 repositories {
     mavenCentral()

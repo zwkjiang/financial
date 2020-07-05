@@ -13,7 +13,11 @@ android {
         versionCode appInfo.versionCode
         versionName appInfo.versionName
         testInstrumentationRunner appInfo.testInstrumentationRunner
-
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
     }
 
     buildTypes {
@@ -50,6 +54,7 @@ dependencies {
     implementation project(path: ':core')
     implementation project(path: ':storage')
     implementation project(path: ':wiget')
+    implementation project(path: ':router')
 }
 repositories {
     mavenCentral()

@@ -18,7 +18,30 @@
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">match_parent</item>
     </style>
-
+    <style name="newUserText">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/gray</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="newUserTextPb">
+        <item name="android:textSize">40sp</item>
+        <item name="android:textColor">@color/red</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="newUserTextRate">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/red</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="newUserTextPD">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
     <style name="normalTxtStyle">
     <item name="android:textColor">@color/white</item>
     <item name="android:textSize">20sp</item>

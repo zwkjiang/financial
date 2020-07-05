@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="itemTxt_accout">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="itemIv_accout">
+        <item name="android:src">@drawable/conputer</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+    </style>
+    <style name="itemLay_accout">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_width">137dp</item>
+        <item name="android:layout_height">100dp</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+</resources>

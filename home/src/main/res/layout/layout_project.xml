@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:padding="10dp"
             android:rowCount="2"
             android:columnCount="2"
@@ -10,29 +11,172 @@
     <LinearLayout
             android:layout_margin="@dimen/project_item_margin"
             android:background="@drawable/item_sytle_1"
-            android:orientation="vertical"
-            android:layout_width="@dimen/project_width"
-            android:layout_height="@dimen/project_height"
-    ></LinearLayout>
+            style="@style/projectLinearLayout"
+    >
+        <TextView
+                android:id="@+id/one_project"
+                style="@style/projectTitle"
+        />
+        <LinearLayout
+                style="@style/childLinear"
+        >
+            <TextView
+                    android:id="@+id/one1_project"
+                    style="@style/newUserText"
+                    android:layout_marginEnd="10dp"
+                    tools:ignore="RtlCompat"/>
+            <TextView
+                    android:id="@+id/one2_project"
+                    style="@style/newUserText"
+                    android:layout_marginEnd="10dp"
+                    tools:ignore="RtlCompat"/>
+        </LinearLayout>
+        <LinearLayout
+                style="@style/childLinear"
+        >
+            <TextView
+                    android:id="@+id/one3"
+                    style="@style/projectLv"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    tools:ignore="NotSibling,RtlCompat"/>
+            <TextView
+                    style="@style/newUserTextRate"
+                    android:text="%"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"/>
+            <TextView
+                    android:id="@+id/one4_project"
+                    style="@style/projectDate"
+            />
+        </LinearLayout>
+    </LinearLayout>
     <LinearLayout
             android:layout_margin="@dimen/project_item_margin"
             android:background="@drawable/item_style_3"
-            android:orientation="vertical"
-            android:layout_width="@dimen/project_width"
-            android:layout_height="@dimen/project_height"
-    ></LinearLayout>
+            style="@style/projectLinearLayout"
+    >
+        <TextView
+                android:id="@+id/two_project"
+                style="@style/projectTitle"
+        /> <LinearLayout
+            style="@style/childLinear"
+    >
+        <TextView
+                android:id="@+id/two1_project"
+                style="@style/newUserText"
+                android:layout_marginEnd="10dp"
+                tools:ignore="RtlCompat"/>
+        <TextView
+                android:id="@+id/two2_project"
+                style="@style/newUserText"
+                android:layout_marginEnd="10dp"
+                tools:ignore="RtlCompat"/>
+    </LinearLayout>
+        <LinearLayout
+                style="@style/childLinear"
+        >
+            <TextView
+                    android:id="@+id/two3"
+                    style="@style/projectLv"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    tools:ignore="NotSibling,RtlCompat"/>
+            <TextView
+                    style="@style/newUserTextRate"
+                    android:text="%"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"/>
+            <TextView
+                    android:id="@+id/two4_project"
+                    style="@style/projectDate"
+            />
+        </LinearLayout>
+    </LinearLayout>
     <LinearLayout
             android:layout_margin="@dimen/project_item_margin"
             android:background="@drawable/item_style_3"
-            android:orientation="vertical"
-            android:layout_width="@dimen/project_width"
-            android:layout_height="@dimen/project_height"
-    ></LinearLayout>
+            style="@style/projectLinearLayout"
+    >
+        <TextView
+                android:id="@+id/three_project"
+                style="@style/projectTitle"
+        />
+        <LinearLayout
+                style="@style/childLinear"
+        >
+            <TextView
+                    android:id="@+id/three1_project"
+                    style="@style/newUserText"
+                    android:layout_marginEnd="10dp"
+                    tools:ignore="RtlCompat"/>
+            <TextView
+                    android:id="@+id/three2_project"
+                    style="@style/newUserText"
+                    android:layout_marginEnd="10dp"
+                    tools:ignore="RtlCompat"/>
+        </LinearLayout>
+        <LinearLayout
+                style="@style/childLinear"
+        >
+            <TextView
+                    android:id="@+id/three3"
+                    style="@style/projectLv"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    tools:ignore="NotSibling,RtlCompat"/>
+            <TextView
+                    style="@style/newUserTextRate"
+                    android:text="%"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"/>
+            <TextView
+                    android:id="@+id/three4_project"
+                    style="@style/projectDate"
+            />
+        </LinearLayout>
+    </LinearLayout>
     <LinearLayout
             android:layout_margin="@dimen/project_item_margin"
             android:background="@drawable/item_sytle_1"
-            android:orientation="vertical"
-            android:layout_width="@dimen/project_width"
-            android:layout_height="@dimen/project_height"
-    ></LinearLayout>
-</GridLayout>
+            style="@style/projectLinearLayout"
+    >
+        <TextView
+                android:id="@+id/four_project"
+                style="@style/projectTitle"
+        />
+        <LinearLayout
+                style="@style/childLinear"
+        >
+            <TextView
+                    android:id="@+id/four1_project"
+                    style="@style/newUserText"
+                    android:layout_marginEnd="10dp"
+                    tools:ignore="RtlCompat"/>
+            <TextView
+                    android:id="@+id/four2_project"
+                    style="@style/newUserText"
+                    android:layout_marginEnd="10dp"
+                    tools:ignore="RtlCompat"/>
+        </LinearLayout>
+        <LinearLayout
+                style="@style/childLinear"
+        >
+            <TextView
+                    android:id="@+id/four3"
+                    style="@style/projectLv"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    tools:ignore="NotSibling,RtlCompat"/>
+            <TextView
+                    style="@style/newUserTextRate"
+                    android:text="%"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="5dp"/>
+            <TextView
+                    android:id="@+id/four4_project"
+                    style="@style/projectDate"
+            />
+        </LinearLayout>
+    </LinearLayout>
+    </GridLayout>

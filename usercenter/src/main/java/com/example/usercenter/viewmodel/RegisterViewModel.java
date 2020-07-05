@@ -22,4 +22,10 @@ public class RegisterViewModel extends BaseViewModel {
         LiveData<BasesRespEntity<String>> basesRespEntityLiveData = repository.registerYan(code);
         return basesRespEntityLiveData;
     }
+
+    public LiveData<BasesRespEntity<UserEntity>> register(){
+        RegisterRepository repository = getRepository(RegisterViewModel.class.getSimpleName());
+        return repository.register(userEntity);
+    }
+
 }

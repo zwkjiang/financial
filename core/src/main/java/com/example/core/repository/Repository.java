@@ -1,5 +1,6 @@
 package com.example.core.repository;
 
+import androidx.lifecycle.LifecycleOwner;
 import com.example.core.model.IModel;
 
 /**
@@ -7,11 +8,19 @@ import com.example.core.model.IModel;
  * @param <T>
  */
 public abstract class Repository<T extends IModel> {
-
+    protected LifecycleOwner owner;
     protected T mModel;
 
-    public Repository() {
+    public Repository(){
         mModel = createModel();
+    }
+    public Repository(LifecycleOwner _owner) {
+        mModel = createModel();
+        owner=_owner;
+    }
+
+    protected T getmModel(){
+        return mModel;
     }
 
     /**

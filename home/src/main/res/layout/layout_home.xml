@@ -31,7 +31,6 @@
                 android:inAnimation="@anim/anim_in"
                 android:outAnimation="@anim/anim_out"
         ></ViewFlipper>
-        <include layout="@layout/layout_newproject" android:layout_width="match_parent" android:layout_height="@dimen/project_height"></include>
         <ImageView
                 app:imgSrc="@{mine.imgPath}"
                 android:layout_width="match_parent"
@@ -40,6 +39,8 @@
                 android:id="@+id/iv_adv_home"
 
         />
+        <include layout="@layout/layout_newproject" android:layout_width="match_parent"
+                 android:layout_height="@dimen/project_height"></include>
         <include layout="@layout/layout_project" android:layout_width="match_parent" android:layout_height="wrap_content"></include>
     </LinearLayout>
     </ScrollView>

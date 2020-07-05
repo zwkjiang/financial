@@ -1,5 +1,6 @@
 package com.example.usercenter.view;
 
+import android.content.Intent;
 import android.view.View;
 import android.widget.Toast;
 import androidx.databinding.ObservableField;
@@ -10,6 +11,7 @@ import com.example.core.viewmodel.BaseViewModel;
 import com.example.protocol.BasesRespEntity;
 import com.example.usercenter.R;
 import com.example.usercenter.databinding.ActivityRegisterBinding;
+import com.example.usercenter.entity.UserEntity;
 import com.example.usercenter.viewmodel.RegisterViewModel;
 
 public class RegisterActivity extends BaseActivity<ActivityRegisterBinding, RegisterViewModel> {
@@ -51,6 +53,18 @@ public class RegisterActivity extends BaseActivity<ActivityRegisterBinding, Regi
             Toast.makeText(this, "两次输入密码不一致", Toast.LENGTH_SHORT).show();
             return;
         }
-
+        LiveData<BasesRespEntity<UserEntity>> register = vm.register();
+        register.observe(this, new Observer<BasesRespEntity<UserEntity>>() {
+            @Override
+            public void onChanged(BasesRespEntity<UserEntity> userEntityBasesRespEntity) {
+                if (userEntityBasesRespEntity!=null){
+                    if (userEntityBasesRespEntity.getData().getUsername().equals(vm.userEntity.getUsername())){
+                        startActivity(new Intent(RegisterActivity.this,LoginActivity.class));
+                    }else{
+                        Toast.makeText(RegisterActivity.this, "注册失败", Toast.LENGTH_SHORT).show();
+                    }
+                }
+            }
+        });
     }
 }

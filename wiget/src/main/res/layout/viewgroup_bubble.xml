@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+>
+
+    <com.example.wiget.BubbleView
+            android:id="@+id/bv_bubblecontainer"
+            app:bubbleContent="10"
+            app:storkWidth="1dp"
+            app:storkColor="@color/white"
+            app:contentSize="12sp"
+            app:contentColor="@color/white"
+            app:backgroundColor="@color/red"
+            app:bubbleRadius="15"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+
+    />
+</RelativeLayout>
