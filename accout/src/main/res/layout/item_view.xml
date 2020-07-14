@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools" xmlns:android="http://schemas.android.com/apk/res/android"
+              >
+
+    <data>
+        <import type="com.example.accout.entity.PaySelectEntity"/>
+        <variable name="payEn"
+                  type="PaySelectEntity"/>
+    </data>
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:background="#6F7AB7"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="5dp"
+    >
+        <ImageView
+                android:id="@+id/img"
+                android:layout_width="90dp"
+                   android:layout_height="80dp"
+                   android:src="@mipmap/yin"
+                   android:scaleType="fitXY"
+                   android:layout_marginTop="30dp"
+        />
+        <TextView
+                android:id="@+id/txt"
+                android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:textColor="#ffffff"
+                  android:textSize="25sp"
+                  android:text="@{payEn.paytype}"
+                  android:layout_toRightOf="@id/img"
+                  android:layout_alignTop="@id/img"
+                  android:layout_marginStart="40dp"
+                  android:layout_marginTop="20dp"
+                  tools:ignore="RtlCompat"/>
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:textColor="#ffffff"
+                  android:textSize="20sp"
+                  android:text="@{payEn.paytypeaccount+' '}"
+                  android:layout_marginTop="30dp"
+                  android:layout_marginStart="100dp"
+                  android:layout_below="@id/txt"
+                  tools:ignore="RtlCompat"/>
+        <CheckBox
+                android:id="@+id/check"
+                android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:background="#6F7AB7"
+                  android:layout_alignParentRight="true"
+                  android:layout_marginTop="15dp"
+                  android:layout_marginEnd="10dp"
+                  tools:ignore="RtlCompat"/>
+    </RelativeLayout>
+
+</layout>

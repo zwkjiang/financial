@@ -55,10 +55,15 @@ dependencies {
     implementation project(path: ':wiget')
     implementation project(path: ':conmon')
     implementation project(path: ':net')
-    implementation project(path: ':home')
+    if(!IS_HOME_APP.toBoolean()){
+        implementation project(path: ':home')
+    }
+    if(!IS_ACCOUNT_APP.toBoolean()){
+        implementation project(path: ':accout')
+    }
     implementation project(path: ':storage')
     implementation project(path: ':finalce')
-    implementation project(path: ':accout')
     annotationProcessor  dependencie.arouter_compiler
     implementation project(path: ':router')
+    implementation (name: 'alipaySdk-15.7.5-20200422171619', ext: 'aar')
 }

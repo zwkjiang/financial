@@ -1,5 +1,6 @@
 package com.example.home.view;
 
+import android.view.View;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.alibaba.android.arouter.facade.annotation.Autowired;
@@ -13,11 +14,14 @@ import com.example.home.adapter.InvestAdapter;
 import com.example.home.databinding.LayoutInvestBinding;
 import com.example.home.entity.TabEntity;
 import com.example.home.viewmodel.InvestViewModel;
+import com.example.router.RouterManager;
 import com.example.router.RouterPath;
 import com.flyco.tablayout.CommonTabLayout;
 import com.flyco.tablayout.listener.CustomTabEntity;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+
 @Route(path = RouterPath.INVEST)
 public class InvestActivity extends BaseActivity<LayoutInvestBinding, InvestViewModel> {
     private CommonTabLayout tabInvest;
@@ -30,6 +34,8 @@ public class InvestActivity extends BaseActivity<LayoutInvestBinding, InvestView
     public String SPriceProject;
 
     private InvestAdapter investAdapter;
+
+    public String price;
 
     @Override
     protected void initBinding() {
@@ -82,5 +88,11 @@ public class InvestActivity extends BaseActivity<LayoutInvestBinding, InvestView
     @Override
     protected int getLayoutId() {
         return R.layout.layout_invest;
+    }
+
+    public  void goPayment(View view){
+        HashMap<String, Object> data = new HashMap<>();
+        data.put("price",price);
+        RouterManager.getInstance().route(RouterPath.PAYMENT,data);
     }
 }

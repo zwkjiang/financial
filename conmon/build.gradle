@@ -59,6 +59,7 @@ dependencies {
     api dependencie.arouter
     api dependencie.legacy
     api dependencie.tablayout
+    api dependencie.BaseRecyclerViewAdapterHelper
 }
 repositories {
     mavenCentral()

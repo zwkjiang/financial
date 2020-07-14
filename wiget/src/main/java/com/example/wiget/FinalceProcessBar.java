@@ -215,7 +215,6 @@ public class FinalceProcessBar extends View {
 
         Paint.FontMetrics fontMetrics = txtPaint.getFontMetrics();
         float distance = (fontMetrics.bottom-fontMetrics.top)/2-fontMetrics.bottom;
-        LogUtils.INSTANCE.i("zwk:bottom",+fontMetrics.bottom+"----top"+fontMetrics.top);
         float baseline = rectF.centerY()+distance;
         if (txtContent!=null){
             canvas.drawText(txtContent,rectF.centerX(),baseline,txtPaint);

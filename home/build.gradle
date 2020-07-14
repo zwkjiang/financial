@@ -57,4 +57,5 @@ dependencies {
     implementation project(path: ':router')
     annotationProcessor  dependencie.arouter_compiler
     annotationProcessor  dependencie.roomcompiler
+    implementation (name: 'alipaySdk-15.7.5-20200422171619', ext: 'aar')
 }

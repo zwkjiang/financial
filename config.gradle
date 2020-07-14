@@ -55,7 +55,8 @@ ext{
             arouter: "com.alibaba:arouter-api:$dependenciesVersion.arouter",
             legacy:"androidx.legacy:legacy-support-v4:$dependenciesVersion.legacy",
             arouter_compiler:"com.alibaba:arouter-compiler:$dependenciesVersion.arouter_compiler",
-            tablayout:"com.flyco.tablayout:FlycoTabLayout_Lib:$dependenciesVersion.tablayout"
+            tablayout:"com.flyco.tablayout:FlycoTabLayout_Lib:$dependenciesVersion.tablayout",
+            BaseRecyclerViewAdapterHelper:"com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.22"
     ]
 
     url = [

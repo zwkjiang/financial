@@ -1,5 +1,6 @@
 package com.example.router;
 
+import android.app.Activity;
 import android.app.Application;
 import android.content.Context;
 import android.content.Intent;
@@ -7,6 +8,7 @@ import android.os.Bundle;
 import android.os.Parcelable;
 import com.alibaba.android.arouter.facade.Postcard;
 import com.alibaba.android.arouter.launcher.ARouter;
+import com.example.conmon.app.BaseApplication;
 
 import java.io.Serializable;
 import java.util.Map;
@@ -36,6 +38,9 @@ public class RouterManager {
     }
     public void route(String path){
         ARouter.getInstance().build(path).navigation();
+    }
+    public void route(String path,int code,Activity activity){
+        ARouter.getInstance().build(path).navigation(activity ,code);
     }
     public void route(String path, Map<String,Object> params){
         Postcard build = ARouter.getInstance().build(path);

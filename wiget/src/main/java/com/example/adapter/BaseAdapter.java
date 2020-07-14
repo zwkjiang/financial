@@ -42,7 +42,7 @@ public abstract class BaseAdapter<T,VH extends RecyclerView.ViewHolder> extends 
         if (this.mDataSource!=null&&_dataSource!=null){
             this.mDataSource.clear();
             this.mDataSource.addAll(_dataSource);
-            notifyDataSetChanged();
+
         }
     }
 

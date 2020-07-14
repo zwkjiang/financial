@@ -95,7 +95,7 @@
                     android:layout_marginStart="18dp"
                     android:layout_width="300dp"
                     android:layout_height="wrap_content"
-                    android:text="8000"
+                    android:text="@={invest.price}"
                     android:background="@drawable/edit_background"
                     tools:ignore="RtlCompat"/>
             <TextView
@@ -165,7 +165,7 @@
         <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recycler_invest"
                 android:layout_width="match_parent"
-                android:layout_height="185dp"
+                android:layout_height="197dp"
         ></androidx.recyclerview.widget.RecyclerView>
         <LinearLayout android:layout_width="match_parent"
                       android:layout_height="wrap_content"
@@ -179,6 +179,7 @@
                     android:background="@color/blue_bnt"
                     android:textSize="20sp"
                     android:textColor="@color/white"
+                    android:onClick="@{invest::goPayment}"
             />
             <Button android:layout_width="150dp"
                     android:layout_height="40dp"
@@ -188,6 +189,7 @@
                     android:textColor="@color/white"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
+                    android:onClick="@{invest::goPayment}"
                     tools:ignore="RtlCompat"/>
         </LinearLayout>
     </LinearLayout>

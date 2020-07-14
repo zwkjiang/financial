@@ -32,4 +32,10 @@
         <attr name="bubbleContent" format="string"></attr>
         <attr name="bubbleRadius" format="float"></attr>
     </declare-styleable>
+
+    <!--自定义ET-->
+    <declare-styleable name="CustomEditText">
+        <attr name="cet_maxlength" format="integer"></attr>
+        <attr name="cet_txtsize" format="dimension"></attr>
+    </declare-styleable>
 </resources>

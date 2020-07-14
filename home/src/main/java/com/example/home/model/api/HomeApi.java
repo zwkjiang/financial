@@ -2,10 +2,13 @@ package com.example.home.model.api;
 
 import androidx.lifecycle.LiveData;
 import com.example.home.entity.BannerEntity;
+import com.example.home.entity.PayEntity;
 import com.example.home.entity.ProductEntity;
 import com.example.home.entity.SysMsgEntity;
 import com.example.protocol.BasesRespEntity;
+import retrofit2.http.Body;
 import retrofit2.http.GET;
+import retrofit2.http.POST;
 
 import java.util.List;
 
@@ -37,4 +40,10 @@ public interface HomeApi {
      */
     @GET("api/Product/getProcducts")
     LiveData<BasesRespEntity<List<ProductEntity>>> getProduct();
+
+    /**
+     * 购买
+     */
+    @POST("api/Transcation/payIn")
+    LiveData<BasesRespEntity<Boolean>> getBuy(@Body PayEntity payEntity);
 }

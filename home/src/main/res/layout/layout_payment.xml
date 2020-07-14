@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools" xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+           >
+
+    <data>
+        <import type="com.example.home.view.PaymentActivity"/>
+        <variable name="pay" type="PaymentActivity"/>
+    </data>
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:orientation="vertical"
+    >
+        <com.example.wiget.TitleBar android:layout_width="match_parent"
+                                    android:layout_height="@dimen/titlebar_wh"
+                                    app:title_txt="支付页面"
+                                    app:title_txt_size="22.0"
+                                    app:left_iocn_visible="true"
+        ></com.example.wiget.TitleBar>
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="250dp"
+                      android:orientation="vertical"
+                      android:gravity="center_vertical"
+        >
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="XX理财产品1号/充值/提现"
+                      android:textSize="22sp"
+                      android:layout_gravity="center_horizontal"
+            />
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:textSize="70sp"
+                      android:text="@{pay.price}"
+                      android:textColor="@color/orange"
+                      android:layout_gravity="center_horizontal"
+                      android:layout_marginTop="30dp"
+            />
+        </LinearLayout>
+        <ImageView android:layout_width="match_parent"
+                   android:layout_height="50dp"
+                   android:scaleType="center"
+                   app:imgSrc="@{pay.loadImg}"
+        />
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="250dp"
+                      android:orientation="vertical"
+                      android:layout_marginTop="40dp"
+        >
+            <LinearLayout
+                    style="@style/linear_payment"
+            >
+                <TextView
+                        style="@style/txt_payment"
+                        android:text="余额支付"
+                />
+                <ImageView
+                           style="@style/iv_payment"
+                           android:layout_marginStart="280dp"
+                           tools:ignore="RtlCompat"/>
+            </LinearLayout>
+            <View android:layout_width="match_parent"
+                  android:layout_height="1dp"
+                  android:background="@color/gray"
+            ></View>
+            <LinearLayout
+                    style="@style/linear_payment"
+            >
+                <ImageView android:layout_width="30dp"
+                           android:layout_height="30dp"
+                           android:scaleType="fitXY"
+                           android:src="@mipmap/weixin"
+                           android:layout_marginEnd="10dp"
+                           tools:ignore="RtlCompat"/>
+                <TextView
+                        style="@style/txt_payment"
+                        android:text="微信支付"
+                />
+                <ImageView
+                        style="@style/iv_payment"
+                        android:layout_marginStart="240dp"
+                        tools:ignore="RtlCompat"/>
+            </LinearLayout>
+            <View android:layout_width="match_parent"
+                  android:layout_height="1dp"
+                  android:background="@color/gray"
+            ></View>
+            <LinearLayout
+                    style="@style/linear_payment"
+                    android:onClick="@{pay::goAli}"
+            >
+                <ImageView android:layout_width="30dp"
+                           android:layout_height="30dp"
+                           android:scaleType="fitXY"
+                           android:src="@mipmap/mayun"
+                           android:layout_marginEnd="10dp"
+                           tools:ignore="RtlCompat"/>
+                <TextView
+                        style="@style/txt_payment"
+                        android:text="支付宝支付"
+                />
+                <ImageView
+                        style="@style/iv_payment"
+                        android:layout_marginStart="240dp"
+                        tools:ignore="RtlCompat"/>
+            </LinearLayout>
+            <View android:layout_width="match_parent"
+                  android:layout_height="1dp"
+                  android:background="@color/gray"
+            ></View>
+            <LinearLayout
+                    style="@style/linear_payment"
+            >
+                <ImageView android:layout_width="30dp"
+                           android:layout_height="30dp"
+                           android:scaleType="fitXY"
+                           android:src="@mipmap/yin"
+                           android:layout_marginEnd="10dp"
+                           tools:ignore="RtlCompat"/>
+                <TextView
+                        style="@style/txt_payment"
+                        android:text="银行卡支付"
+                />
+                <ImageView
+                        style="@style/iv_payment"
+                        android:layout_marginStart="240dp"
+                        tools:ignore="RtlCompat"/>
+            </LinearLayout>
+            <View android:layout_width="match_parent"
+                  android:layout_height="1dp"
+                  android:background="@color/gray"
+            ></View>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

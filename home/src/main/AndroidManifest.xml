@@ -2,5 +2,7 @@
           package="com.example.home">
     <application>
         <activity android:name=".view.InvestActivity"></activity>
+        <activity android:name=".view.PaymentActivity"></activity>
+        <activity android:name=".alipay.AliPayActivity"></activity>
     </application>
 </manifest>

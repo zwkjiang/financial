@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -16,7 +17,7 @@ import com.example.router.RouterManager;
 import com.example.router.RouterPath;
 
 public class AccountFragment extends BaseFragment<LayoutAccoutBinding, AccountViewModel> {
-
+    private LinearLayout selectPayAccout;
     @Override
     protected void initData(Bundle savedInstanceState) {
 
@@ -24,11 +25,22 @@ public class AccountFragment extends BaseFragment<LayoutAccoutBinding, AccountVi
 
     @Override
     protected void initView(View view) {
+        selectPayAccout = (LinearLayout) view.findViewById(R.id.selectPay_accout);
+        initEvent();
+    }
 
+    private void initEvent() {
+        selectPayAccout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                RouterManager.getInstance().route(RouterPath.PAYSELECT);
+            }
+        });
     }
 
     @Override
     protected void initBinding() {
+
         binding.setAccout(this);
     }
 

@@ -80,6 +80,7 @@
     >
     </View>
     <LinearLayout
+            android:id="@+id/selectPay_accout"
             style="@style/itemLay_accout"
     >
         <ImageView
